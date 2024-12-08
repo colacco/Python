@@ -1,16 +1,35 @@
-# Rock, paper, scissors game
+# Rock, paper, scissor game
 
 import random
 
-print("Let's play rock, paper , scissor game!")
+options = ("rock", "paper", "scissor")
+player = None
+is_running = True
 
-while True:
-    guess = input("What's your  play?(q to quit): ").lower()
-    if guess == "scissor":
-        print("you play a scissor!")
-    elif guess == "rock":
-        print("you play a rock!")
-    elif guess == "paper":
-        print("you play a paper!")
+print("Let's play rock, paper scissor game!")
+while is_running:
+    pc = random.choice(options)
+    player = input("What is your play (rock, paper or scissor)?").lower()
+    if player not in options:
+        print(f"The value {player} is invalid!")
     else:
-        print(f"The value {guess} is invalid, please try again!")
+        if player == pc:
+            print("Draw!")
+            print(f"You and computer select {pc}")
+        elif pc == "rock" and player == "scissor" or pc == "paper" and player == "rock" or pc == "scissor" and player == "paper":
+            print("You loose!")
+            print(f"Computer choose {pc} and you choose {player}.")
+        else:
+            print("You win!")
+            print(f"Computer choose {pc} and you choose {player}.")
+
+    play = input("You wanna play again (y/n)?: ")
+    if play == "n":
+        is_running = False
+    elif play is not "n":
+        is_running = True
+
+print("Ok, see you next time!")
+
+# This is a second version.. In my first, I couldn't make the right way. I think this happen because I thought about the whole process... I see one time Bro Code and he starts from the basics. He don't thinks in the looping for now, but thinks about the essence of the thing.
+# I couldn't make this project on my own, but this idea for now will be increnible for my next projects!
