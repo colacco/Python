@@ -10,5 +10,5 @@
 # result = name.isnumber() -> Boolean, considera se há APENAS números
 # result = name.count(' ') -> Conta quantos caracteres há determinado pelo parenteses
 # result = name.replace('LH', 'AGA') -> SUBSTITUI LH por AGA em uma sentença
-
-print(help(str))
+name = "a"
+print(name.isdigit())
