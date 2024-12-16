@@ -7,7 +7,7 @@
 # reault = name.lower() -> Deixa em minúsculo TODOS caracteres
 # result = name.isdigit() -> Boolean, considera se há APENAS digitos
 # result = name.isalpha() -> Boolean, considera se há APENAS letras do alfabeto
-# result = name.isnumber() -> Boolean, considera se há APENAS números
+# result = name.isnumeric() -> Boolean, considera se há APENAS números
 # result = name.count(' ') -> Conta quantos caracteres há determinado pelo parenteses
 # result = name.replace('LH', 'AGA') -> SUBSTITUI LH por AGA em uma sentença
 name = "a"
