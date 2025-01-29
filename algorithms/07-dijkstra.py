@@ -29,8 +29,15 @@ parents["fin"] = None
 procesed = []
 
 
-def find_lowest_cost():
-    pass
+def find_lowest_cost(costs):
+    lowest_cost = float("inf")
+    lowest_cost_node = None
+    for node in costs:
+        cost = costs[node]
+        if cost < lowest_cost and node not in procesed:
+            lowest_cost = cost
+            lowest_cost_node = node
+    return lowest_cost_node
 
 node = find_lowest_cost(costs)
 while node is not None:
@@ -43,3 +50,6 @@ while node is not None:
             parents[neighbor] = node # UPDATE A PARENT 
     procesed.append(node) # -1 NODE
     node = find_lowest_cost(costs)
+
+print(parents)
+print(costs)
