@@ -41,7 +41,7 @@ def next_nodo(costs):
     nodo_mais_baixo = None
     for nodo in costs:
         cost = costs[nodo]
-        if nodo < custo_baixo and nodo not in processados:
+        if cost < custo_baixo and nodo not in processados:
             custo_baixo = cost
             nodo_mais_baixo = nodo
     return nodo_mais_baixo
@@ -58,4 +58,5 @@ while nodo is not None:
     processados.append(nodo)
     nodo = next_nodo(costs)
 
+print(f"Esses são os pais {parents}")
 # Reading when the code is complete is so easy. But to start the reasoning by the zero is so difficult... May I need to make more reviews by this.
