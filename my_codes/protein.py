@@ -11,11 +11,7 @@ def decode(sequence):
     sequence.upper()
     start = sequence.find("AUG")
     length = len(sequence)
-    num_codon = 0
-    cytosine = 0
-    adenine = 0
-    guanine = 0
-    uracil = 0
+    num_codon, cytosine, adenine, guanine, uracil = 0, 0, 0, 0, 0
     if start == -1:
         return print("There's no a start codon.")
     
@@ -82,6 +78,6 @@ def decode(sequence):
 
 
 #sequence = input("Write the genetic code for decode: ")
-sequence = "AAAAAAAAAAAAAUGUUUGUGAACCAGCAUUUAUGUGGUAGUCACCUGGUAGAAGCCUUGUAUCUUGUCUGCGGGGAGCGAGGCUUCUUUUACACACCCAAAGCUUGAUUUUUUUUUUUUUUUCCUUAAAA"
+sequence = "AAAAAAAAAAAAAUGUUUGUGAACCAGCAUUUAUGUGGUAGUCACCUGGUAGAAGCCUUGUAUCUUGUCUGCGGGGAGCGAGGCUUCUUUUACACACCCAAAGCUUGAUUUUUUUUUUUUUUUCCAAAA"
 
 decode(sequence)
